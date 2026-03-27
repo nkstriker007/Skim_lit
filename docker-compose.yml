@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .                          # root context — can access requirements.txt
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./skimlit.db
+      - SECRET_KEY=change-this-before-deploying
+      - MODEL_PATH=/app/saved_models/skimlit_model5_final.keras
+      - CLASS_NAMES_PATH=/app/saved_models/class_names.json
+    volumes:
+      - ./saved_models:/app/saved_models
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: .                          # root context
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    environment:
+      - API_URL=http://backend:8000
