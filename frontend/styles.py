@@ -2,12 +2,6 @@ import streamlit as st
 import base64
 import os
 
-st.set_page_config(
-    page_title="SkimLit",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
 def apply_styles():
     image_path = "bg_img.jpg"
 
