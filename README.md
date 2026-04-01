@@ -27,7 +27,7 @@ Built on the [PubMed 200k RCT dataset](https://github.com/Franck-Dernoncourt/pub
 |---|---|---|---|
 | Baseline (TF-IDF) | 72.2% | 0.699 | Multinomial NB |
 | Model 1 | 77.7% | 0.775 | Conv1D + token embeddings |
-| Model 5 (deployed) | TBD | TBD | Token + Char + Positional (multimodal) |
+| Model 5 (deployed) | 88.9% | 0.89 | Token + Char + Positional (multimodal) |
 | PubMedBERT (benchmark) | ~90%+ | ~0.89+ | Fine-tuned transformer |
 
 > Model 5 is the deployed model. PubMedBERT serves as a state-of-the-art benchmark.
