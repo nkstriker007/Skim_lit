@@ -1,4 +1,4 @@
-# 🔬 SkimLit — Biomedical Abstract Classifier
+# 🔬 Biomedical Abstract Classifier
 
 Automatically classifies sentences in biomedical research abstracts into their rhetorical roles: **Background, Objective, Methods, Results, and Conclusions**.
 
