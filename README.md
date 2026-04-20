@@ -66,14 +66,14 @@ docker-compose up --build
 
 ## API Endpoints
 
-| Method | Endpoint | Auth | Description |
+| Method | Endpoint | Description |
 |---|---|---|---|
-| POST | `/auth/register` | ❌ | Create account |
-| POST | `/auth/login` | ❌ | Get JWT token |
-| POST | `/predict` | ✅ | Classify abstract |
-| GET | `/history` | ✅ | Past classifications |
-| GET | `/analytics/usage` | ✅ | Usage stats |
-| GET | `/health` | ❌ | Health check |
+| POST | `/auth/register`  | Create account |
+| POST | `/auth/login`  | Get JWT token |
+| POST | `/predict` | Classify abstract |
+| GET | `/history` | Past classifications |
+| GET | `/analytics/usage`| Usage stats |
+| GET | `/health` | Health check |
 
 Full interactive docs: `http://localhost:8000/docs`
 
